@@ -5,6 +5,7 @@
 !/tsconfig.json
 !LICENSE
 !README.md
+!package.json
 
 # Logs
 logs
@@ -32,7 +33,6 @@ dist-ssr/
 *.sln
 *.sw?
 
-package.json
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
