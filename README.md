@@ -92,23 +92,21 @@ Reviewing the codebase demonstrates key implementation patterns and architectura
 
 To fully appreciate the design and interactive elements, here are the key sections you should capture:
 
-* **Desktop Homepage:**
-    ![Desktop Homepage Screenshot](images/desktop-homepage.webp) 
+### Desktop Screenshots:
 
-* **Desktop Projects Section:**
-    ![Desktop Project Section Screenshot](images/desktop-projects-section.webp)
+<img src="images/desktop-homepage.webp" alt="Desktop Homepage Screenshot" width="450"/>
+<img src="images/desktop-project-section.webp" alt="Desktop Project Section Screenshot" width="450"/>
+<img src="images/desktop-skills-section.webp" alt="Desktop Skills Section Screenshot" width="450"/>
+<img src="images/contact-form.webp" alt="Contact Form Screenshot" width="450"/>
 
-* **Desktop Skills Section:**
-    ![Desktop Skills Section Screenshot](images/desktop-skills-section.webp)
+---
 
-* **Mobile Homepage:**
-  <img src="images/mobile-homepage.webp" alt="Mobile Homepage Screenshot" width="320"/>
+### Mobile Screenshots:
 
-* **Mobile Navigation:**
-  <img src="images/mobile-navigation.webp" alt="Mobile Navigation Screenshot" width="320"/>
-
-* **Contact Form:**
-    ![Contact Form Screenshot](images/contact-form.webp)
+<p align="center">
+  <img src="images/mobile-homepage.webp" alt="Mobile Homepage Screenshot" width="240" style="margin: 0 10px;"/>
+  <img src="images/mobile-navigation.webp" alt="Mobile Navigation Screenshot" width="240" style="margin: 0 10px;"/>
+</p>
 
 ---
 
