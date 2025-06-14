@@ -95,7 +95,7 @@ To fully appreciate the design and interactive elements, here are the key sectio
 ### Desktop Screenshots:
 
 <img src="images/desktop-homepage.webp" alt="Desktop Homepage Screenshot" width="450"/>
-<img src="images/desktop-project-section.webp" alt="Desktop Project Section Screenshot" width="450"/>
+<img src="images/desktop-projects-section.webp" alt="Desktop Project Section Screenshot" width="450"/>
 <img src="images/desktop-skills-section.webp" alt="Desktop Skills Section Screenshot" width="450"/>
 <img src="images/contact-form.webp" alt="Contact Form Screenshot" width="450"/>
 
@@ -103,9 +103,9 @@ To fully appreciate the design and interactive elements, here are the key sectio
 
 ### Mobile Screenshots:
 
-<p align="center">
-  <img src="images/mobile-homepage.webp" alt="Mobile Homepage Screenshot" width="240" style="margin: 0 10px;"/>
-  <img src="images/mobile-navigation.webp" alt="Mobile Navigation Screenshot" width="240" style="margin: 0 10px;"/>
+<p align="left">
+  <img src="images/mobile-homepage.webp" alt="Mobile Homepage Screenshot" width="240" style="margin: 0 16px;"/>
+  <img src="images/mobile-navigation.webp" alt="Mobile Navigation Screenshot" width="240" style="margin: 0 16px;"/>
 </p>
 
 ---
