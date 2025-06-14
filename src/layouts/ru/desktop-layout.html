@@ -1,0 +1,30 @@
+<!--
+ * Copyright (c) 2025 Danil Klimov.
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+-->
+
+<div class="max-w-[120rem] w-full min-h-screen mx-auto flex flex-row items-start justify-between bg-transparent">
+   <aside class="grid grid-rows-3 h-screen max-w-40 w-full py-4 pl-6 z-60 bg-transparent" aria-label="Основная навигация и выбор языка">
+    <nav class="row-start-2 flex flex-col gap-6 items-start justify-center will-change-auto" data-component="ts-nav" aria-label="Главная навигация по сайту">
+    </nav>
+    <div class="flex flex-col items-start justify-end row-start-3">
+     <button class="group flex flex-row items-center justify-center gap-2 cursor-pointer will-change-auto" data-lang-switcher aria-label="Сменить язык">
+      <span class="text-xs leading-none lang-switcher__text" data-lang="ru">RU</span>
+      <span class="h-2.5 w-0.5 bg-subaccent opacity-80 group-hover:opacity-100 transition-all ease-in-out duration-150 lang-switcher__separator" aria-hidden="true"></span>
+      <span class="text-xs leading-none lang-switcher__text" data-lang="en">EN</span>
+     </button>
+    </div>
+   </aside>
+   <main id="app-pages-container" class="grow h-screen relative overflow-hidden" aria-live="polite">
+   </main>
+   <aside class="h-screen max-w-40 w-full pr-6 py-4 flex flex-col items-end justify-end z-60 bg-transparent">
+    <a href="/docs/CV.pdf" download="CV.pdf" class="flex flex-row items-center gap-2 cursor-pointer text-xs leading-none text-subaccent hover:text-white hover:brightness-115 transition-all ease-in-out duration-150 will-change-auto" data-cv-download aria-label="Скачать резюме">
+     <div class="w-2 h-2.5 bg-[url(/icons/CV_icon.svg)] bg-no-repeat bg-center bg-contain" aria-hidden="true"></div>
+     <span class="">Скачать CV</span>
+     <span class="text-subaccent opacity-90 font-light text-xs">(ru)</span>
+    </a>
+   </aside>
+
+  </div>

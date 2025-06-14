@@ -1,0 +1,117 @@
+/*
+ * Copyright (c) 2025 Danil Klimov.
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
+.project-item,
+.project-item__stick,
+.project-item__title,
+.project-item__description {
+  transition: all 0.15s ease-in-out;
+}
+
+.project-item {
+  opacity: 0;
+}
+
+.project-item > div {
+}
+
+.project-item__stick {
+  display: block;
+  width: 2px;
+  border-radius: 9999px;
+  height: 12px;
+  background-color: var(--color-subaccent);
+  opacity: 0.9;
+}
+
+.project-item__title {
+  font-size: 1rem;
+  line-height: 1;
+  white-space: nowrap;
+  text-align: left;
+  color: var(--color-subaccent);
+  font-weight: normal;
+}
+
+
+
+.project-item__description {
+  max-width: 94%;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-align: justify;
+  color: var(--color-subaccent);
+  opacity: 0.9;
+  font-weight: light;
+}
+
+.project-item.is-hover .project-item__stick {
+  background-color: white;
+  opacity: 0.9;
+  height: 12px;
+}
+
+@media (max-width: 64rem) {
+  .project-item__description {
+    max-width: 100%;
+  }
+
+}
+
+@media (max-width: 24rem) {
+  .project-item__title {
+    white-space: wrap;
+    max-width: 60%;
+  }
+  .project-item__stick {
+    display: none;
+  }
+}
+
+.project-item.is-hover .project-item__title {
+  color: white;
+  font-weight: normal;
+}
+
+.project-item.is-hover .project-item__description {
+  opacity: 1;
+}
+
+.project-item.is-active {
+}
+
+.project-item.is-active .project-item__stick {
+  background-color: white;
+  opacity: 0.9;
+}
+
+.project-item.is-active > div {
+}
+
+.project-item.is-active .project-item__title {
+  color: white;
+  font-weight: 600;
+}
+
+.project-item.is-active .project-item__description {
+  opacity: 1;
+}
+
+.is-list-hovered .project-item:not(.is-hover) .project-item__stick {
+  background-color: var(--color-subaccent);
+  opacity: 0.9;
+  height: 12px;
+}
+
+.is-list-hovered .project-item:not(.is-hover) .project-item__title {
+  color: var(--color-subaccent);
+  font-weight: normal;
+}
+
+.is-list-hovered .project-item:not(.is-hover) .project-item__description {
+  opacity: 0.9;
+}

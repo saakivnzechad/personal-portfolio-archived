@@ -1,0 +1,122 @@
+<!--
+ * Copyright (c) 2025 Danil Klimov.
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+-->
+
+<section id="contacts" class="container max-w-screen-lg w-full h-full flex items-center justify-center mx-auto" aria-labelledby="contacts-heading">
+ <div class="flex flex-row items-start justify-between w-full h-fit">
+  <div class="flex flex-col gap-16 xl:gap-20 w-[90%] xl:w-full h-fit">
+   <h2 id="contacts-heading" class="text-[2rem] xl:text-5xl font-normal text-white leading-none text-nowrap">My Contacts & Social</h2>
+   <div class="flex flex-col gap-16">
+    <ul class="flex flex-col gap-6" role="list" aria-labelledby="core-mails-heading">
+     <h3 id="core-mails-heading" class="text-xs text-subaccent font-semibold leading-none">Primary Contact</h3>
+     <li class="flex flex-col items-start gap-4 w-fit">
+      <div class="group flex flex-row items-center gap-3 h-fit cursor-pointer">
+       <span class="group-hover:opacity-100 group-hover:bg-white block w-0.5 h-3 bg-subaccent opacity-90 rounded-full transition-all ease-in-out duration-150 will-change-auto" aria-hidden="true"></span>
+       <a href="mailto:email@email.email" class="group-hover:font-semibold text-base leading-none text-white font-normal h-fit transition-all ease-in-out duration-150 will-change-auto">email@email.email<span class="select-none font-semibold" aria-hidden="true"> →</span></a>
+      </div>
+      <p class="text-sm font-light leading-none text-subaccent opacity-90">Reach out for inquiries or collaborations. Click to copy or connect.</p>
+     </li>
+     <li class="flex flex-col items-start gap-4 w-fit">
+      <div class="group flex flex-row items-center gap-3 h-fit cursor-pointer">
+       <span class="group-hover:opacity-100 group-hover:bg-white block w-0.5 h-3 bg-subaccent opacity-90 rounded-full transition-all ease-in-out duration-150 will-change-auto" aria-hidden="true"></span>
+       <a href="https://link" class="group-hover:font-semibold text-base leading-none text-white font-normal h-fit transition-all ease-in-out duration-150 will-change-auto" target="_blank" rel="noopener noreferrer">Link<span class="select-none font-semibold" aria-hidden="true"> →</span></a>
+      </div>
+      <p class="text-sm font-light leading-none text-subaccent opacity-90">Connect on %Link% for quick questions or urgent matters. Click to open.</p>
+     </li>
+    </ul>
+    <ul class="flex flex-col gap-6" role="list" aria-labelledby="other-links-heading">
+     <h3 id="other-links-heading" class="text-xs text-subaccent font-semibold leading-none">Other Links</h3>
+     <li class="group flex flex-row items-center">
+       <span class="h-4 min-w-4 opacity-90 bg-[url(/icons/link-mini-icon.svg)] bg-cover bg-no-repeat mr-3 group-hover:opacity-100 group-hover:brightness-115 transition-all ease-in-out duration-150 will-change-auto" aria-hidden="true"></span>
+       <a href="https://link1" class="group-hover:font-semibold group-hover:opacity-100 text-base leading-none text-white opacity-90 font-normal h-fit transition-all ease-in-out duration-150 will-change-auto" target="_blank" rel="noopener noreferrer">link1<span class="select-none font-semibold" aria-hidden="true"> →</span></a>
+      </li>
+      <li class="group flex flex-row items-center">
+       <span class="h-4 min-w-4 opacity-90 bg-[url(/icons/link-mini-icon.svg)] bg-cover bg-no-repeat mr-3 group-hover:opacity-100 group-hover:brightness-115 transition-all ease-in-out duration-150 will-change-auto" aria-hidden="true"></span>
+       <a href="https://link2" class="group-hover:font-semibold group-hover:opacity-100 text-base leading-none text-white opacity-90 font-normal h-fit transition-all ease-in-out duration-150 will-change-auto" target="_blank" rel="noopener noreferrer">link2<span class="select-none font-semibold" aria-hidden="true"> →</span></a>
+      </li>
+      <li class="group flex flex-row items-center">
+       <span class="h-4 min-w-4 opacity-90 bg-[url(/icons/link-mini-icon.svg)] bg-cover bg-no-repeat mr-3 group-hover:opacity-100 group-hover:brightness-115 transition-all ease-in-out duration-150 will-change-auto" aria-hidden="true"></span>
+       <a href="https://link3" class="group-hover:font-semibold group-hover:opacity-100 text-base leading-none text-white opacity-90 font-normal h-fit transition-all ease-in-out duration-150 will-change-auto" target="_blank" rel="noopener noreferrer">link3<span class="select-none font-semibold" aria-hidden="true"> →</span></a>
+     </li>
+    </ul>
+   </div>
+  </div>
+  <article class="flex flex-col w-min items-end gap-4" aria-labelledby="send-inquiry-heading">
+   <div class="w-[17.5rem] xl:w-[22.5rem] 2xl:w-[23.75rem]">
+    <h3 id="send-inquiry-heading" class="text-xs text-subaccent font-semibold leading-none">Send a Message</h3>
+   </div>
+   <div id="form-wrapper" class="w-[17.5rem] xl:w-[22.5rem] 2xl:w-[23.75rem] relative will-change-auto h-auto">
+    <form id="contact-form" class="flex flex-col gap-y-4 mr-0.25" novalidate>
+     <div class="relative">
+      <input
+       type="text"
+       name="name"
+       placeholder="Your Name"
+       required
+       class="w-full px-4 py-3 rounded-xs outline outline-white bg-black
+        text-white font-normal placeholder:text-sm placeholder:font-light placeholder:text-subaccent placeholder:opacity-80
+        focus:outline-white focus:outline-1 focus:outline-offset-0 focus:text-subaccent focus:placeholder:text-subaccent focus:font-semibold
+        relative z-10 transition-all ease-in-out duration-150 will-change-auto"
+       aria-label="Your Name"
+      />
+      <div class="absolute top-[0.375rem] right-[0.25rem] w-full h-full rounded-xs border border-white -z-10 pointer-events-none" aria-hidden="true"></div>
+     </div>
+
+     <div class="relative">
+      <input
+       type="email"
+       name="email"
+       placeholder="Your Email"
+       required
+       class="w-full px-4 py-3 rounded-xs outline outline-white bg-black
+       text-white font-normal
+       placeholder:text-sm placeholder:font-light placeholder:text-subaccent placeholder:opacity-80
+       focus:outline-white focus:outline-1 focus:outline-offset-0 focus:text-subaccent focus:placeholder:text-subaccent focus:font-semibold
+       relative z-10 transition-all ease-in-out duration-150 will-change-auto"
+       aria-label="Your Email"
+      />
+      <div class="absolute top-[0.375rem] right-[0.25rem] w-full h-full rounded-xs border border-white -z-10 pointer-events-none" aria-hidden="true"></div>
+     </div>
+
+     <div class="relative">
+      <textarea
+       name="text"
+       placeholder="Your Message"
+       required
+       rows="4" class="w-full px-4 py-3 rounded-xs outline outline-white bg-black resize-y text-white font-normal
+       placeholder:text-sm placeholder:font-light placeholder:text-subaccent placeholder:opacity-80
+       focus:outline-white focus:outline-1 focus:outline-offset-0 focus:text-subaccent focus:placeholder:text-subaccent focus:font-semibold
+       relative z-10 transition-all ease-in-out duration-150 will-change-auto"
+       aria-label="Your Message"
+      ></textarea>
+      <div class="absolute top-[0.375rem] right-[0.25rem] w-full h-full rounded-xs border border-white -z-10 pointer-events-none" aria-hidden="true"></div>
+     </div>
+
+     <div id="contacts-button-wrapper" class="relative">
+      <button
+       type="submit"
+       class="group w-full px-4 py-3 rounded-xs outline outline-white bg-black
+       leading-none
+       hover:bg-black hover:outline-subaccent
+       focus:bg-black focus:outline-subaccent
+       active:bg-subaccent active:outline-subaccent
+       transition-all ease-in-out duration-150 will-change-auto
+       relative z-10 flex justify-center items-center"
+      >
+       <span class="font-normal group-hover:font-semibold group-hover:text-white group-focus:font-semibold group-focus:text-white group-active:font-semibold group-active:text-black text-subaccent text-sm transition-all ease-in-out duration-150">Send message</span>
+       <span class="select-none font-semibold text-sm group-hover:text-white group-focus:text-white group-active:text-black transition-all ease-in-out duration-150" aria-hidden="true">→</span>
+      </button>
+      <div class="absolute top-[0.375rem] right-[0.25rem] w-full h-full rounded-xs border border-white -z-10 pointer-events-none" aria-hidden="true"></div>
+     </div>
+    </form>
+    <div id="form-messages" class="mt-8 text-center" aria-live="polite"></div>
+   </div>
+  </article>
+ </div>
+</section>
+<footer class="w-full h-min absolute bottom-0 mx-auto">
+  <p class="text-center text-xs text-subaccent leading-none mb-4">Designed and developed by Danil Klimov (sarthriles/saakivnzechad) © 2025</p> <!-- but I will not cut a copyright -->
+</footer>

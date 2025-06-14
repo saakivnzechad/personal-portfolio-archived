@@ -1,0 +1,39 @@
+<!--
+ * Copyright (c) 2025 Danil Klimov.
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+-->
+
+<section id="main" class="container max-w-screen-lg w-full h-full grid grid-rows-[1fr_auto_1fr] mx-auto" aria-labelledby="hero-title-heading">
+ <div id="hero-title" class="w-fit flex flex-col items-center justify-center py-6 gap-4 row-start-2 h-fit will-change-auto mx-auto">
+  <h1 id="hero-title-heading" class="leading-none text-5xl font-semibold text-white text-shadow-extraglow text-center w-fit">Имя Фамилия ИЛИ Никнейм</h1>
+  <p class="leading-none text-2xl font-normal text-white text-shadow-hugeglow text-center">Позиционирование</p>
+ </div>
+ <div class="w-full flex flex-col items-center justify-between row-start-3">
+  <ul id="hero-buttons" class="flex flex-row gap-5 will-change-transform" role="list" aria-label="Ссылки на социальные сети">
+   <li><a href="https://link1" class="bg-[url(/icons/link1.svg)] bg-cover block size-6 rounded-full shadow-smallglow cursor-pointer hover:brightness-115 transition-all ease-in-out duration-150" target="_blank" rel="noopener noreferrer" aria-label="Профиль 1"></a></li>
+   <li><a href="https://link2" class="bg-[url(/icons/link2.svg)] bg-cover block size-6 rounded-full shadow-smallglow cursor-pointer hover:brightness-115 transition-all ease-in-out duration-150" target="_blank" rel="noopener noreferrer" aria-label="Профиль 2"></a></li>
+   <li><a href="https://link3" class="bg-[url(/icons/link3.svg)] bg-cover block size-6 rounded-full shadow-smallglow cursor-pointer hover:brightness-115 transition-all ease-in-out duration-150" target="_blank" rel="noopener noreferrer" aria-label="Профиль 3"></a></li>
+  </ul>
+  <div class="px-1 py-12 cursor-pointer" id="arrow-down--internal" role="button" aria-label="Прокрутить к следующему разделу">
+   <button class="w-5.5 h-3 bg-[url(/icons/arrow_bottom.svg)] animate-bounce cursor-pointer will-change-transform" aria-hidden="true"></button>
+  </div>
+ </div>
+</section>
+<div id="hero-background" class="-z-50 hero-background overflow-hidden overscroll-none hero-inpage-elem opacity-0" aria-hidden="true"></div>
+<div id="hero-fog" class="fogwrapper absolute top-0 left-0 w-screen h-screen fog-gradient -z-40 mix-blend-color-dodge hero-inpage-elem opacity-0" aria-hidden="true">
+ <div id="foglayer_01" class="fog -z-40">
+  <div class="image01 blur-3xl will-change-auto"></div>
+  <div class="image02 blur-3xl will-change-auto"></div>
+ </div>
+ <div id="foglayer_02" class="fog -z-30">
+  <div class="image01 blur-3xl will-change-auto"></div>
+  <div class="image02 blur-3xl will-change-auto"></div>
+ </div>
+ <div id="foglayer_03" class="fog -z-20">
+  <div class="image01 blur-3xl will-change-auto"></div>
+  <div class="image02 blur-3xl will-change-auto"></div>
+ </div>
+</div>
+<!-- вот этот огромный блок с туманом и фоном очень тесно связан с HeroManager.ts -->

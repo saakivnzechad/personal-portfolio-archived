@@ -1,0 +1,53 @@
+/*
+ * Copyright (c) 2025 Danil Klimov.
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
+@import "tailwindcss";
+
+@theme {
+    --color-subaccent: #D3DFE6;
+    --color-accent: #FFFFFF;
+    --parallax-margin: 0.5rem;
+    --text-shadow-thinglow: 0px 0px 1px rgba(211, 223, 230, 0.03);
+    --text-shadow-smallglow: 0px 0px 1px rgba(211, 223, 230, 0.05);
+    --text-shadow-largeglow: 0px 1px 2px rgba(255, 255, 255, 0.05);
+    --text-shadow-hugeglow: 0px 1px 2px rgba(255, 255, 255, 0.2);
+    --text-shadow-extraglow: 0px 2px 4px rgba(255, 255, 255, 0.25);
+    --shadow-smallglow: 0px 0px 1px rgba(211, 223, 230, 0.05);
+    --shadow-largeglow: 0px 1px 2px rgba(255, 255, 255, 0.05);
+    --font-exo2: "Exo 2", sans-serif;
+}
+/* some magic of tailwind */
+
+body {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 400;
+}
+
+/* we make background on desktop a little larger for use parallax effect. Btw original image is mine, let’s make it look like it’s going to be copyright*/
+.hero-background {
+  @apply fixed bg-cover bg-center;
+  width: calc(100vw + 2 * var(--parallax-margin));
+  height: calc(100vh + 2 * var(--parallax-margin));
+  top: calc(-1 * var(--parallax-margin));
+  left: calc(-1 * var(--parallax-margin));
+  background-image:
+    linear-gradient(90deg,rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%),
+    linear-gradient(180deg,rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1) 100%),
+    linear-gradient(180deg,rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 100%),
+    radial-gradient(circle,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%),
+    url('/images/background-layer.webp');
+}
+
+.hero-background-mobile {
+    @apply bg-cover bg-center;
+    background-image:
+        linear-gradient(90deg,rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%),
+        linear-gradient(180deg,rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1) 100%),
+        linear-gradient(180deg,rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 100%),
+        radial-gradient(circle,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%),
+        url('/images/background-layer.webp');
+    }

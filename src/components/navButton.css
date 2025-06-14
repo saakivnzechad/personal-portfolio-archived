@@ -1,0 +1,87 @@
+/*
+ * Copyright (c) 2025 Danil Klimov.
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
+.nav-button {
+  padding-left: 0;
+  transition: color 0.15s ease-in-out, font-weight 0.15s ease-in-out, text-shadow 0.15s ease-in-out;
+}
+
+.nav-button__stick {
+  opacity: 0;
+  top: 50%;
+  transform: translate3d(-100%, -50%, 0);
+  transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out, background-color 0.15s ease-in-out, text-shadow 0.15s ease-in-out;
+  background-color: var(--color-subaccent);
+}
+
+.nav-button__text {
+  margin-left: 0;
+  transition: margin-left 0.15s ease-in-out, color 0.15s ease-in-out, font-weight 0.15s ease-in-out, text-shadow 0.15s ease-in-out;
+  color: var(--color-subaccent);
+}
+
+.nav-button.is-active {
+  color: white;
+  font-weight: 600;
+}
+
+.nav-button.is-active > .nav-button__stick {
+  opacity: 1;
+  background-color: white;
+  transform: translate3d(0%, -50%, 0);
+}
+
+.nav-button.is-active > .nav-button__text {
+  margin-left: 0.5rem;
+  color: white !important;
+}
+
+.nav-container-is-hovered .nav-button.is-active {
+  color: var(--color-subaccent);
+  font-weight: 400;
+  text-shadow: none;
+}
+
+.nav-container-is-hovered .nav-button.is-active > .nav-button__stick {
+  opacity: 0;
+  background-color: var(--color-subaccent);
+  text-shadow: none;
+  transform: translate3d(-100%, -50%, 0);
+}
+
+.nav-container-is-hovered .nav-button.is-active > .nav-button__text {
+  margin-left: 0;
+}
+
+.nav-container-is-hovered .nav-button:not(.is-active):hover > .nav-button__stick {
+  opacity: 1;
+  background-color: var(--color-subaccent);
+  transform: translate3d(0%, -50%, 0);
+}
+
+.nav-container-is-hovered .nav-button:not(.is-active):hover > .nav-button__text {
+  margin-left: 0.5rem;
+}
+
+.nav-container-is-hovered .nav-button.is-active:hover > .nav-button__stick {
+  opacity: 1;
+  background-color: var(--color-subaccent);
+  transform: translate3d(0%, -50%, 0);
+}
+
+.nav-container-is-hovered .nav-button.is-active:hover > .nav-button__text {
+  margin-left: 0.5rem;
+}
+
+.nav-container-is-hero .nav-container-is-hovered .nav-button:hover {
+  text-shadow: var(--text-shadow-smallglow);
+}
+
+.nav-container-is-hero .nav-container-is-hovered .nav-button:hover > .nav-button__stick {
+  text-shadow: var(--text-shadow-thinglow);
+}
+

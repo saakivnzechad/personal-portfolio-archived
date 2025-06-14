@@ -1,0 +1,264 @@
+<!--
+ * Copyright (c) 2025 Danil Klimov.
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+-->
+
+<header class="fixed top-4 left-4 sm:top-6 sm:left-6 min-w-[12rem] w-[calc(100%-2rem)] max-w-[22.5rem] h-fit z-100 will-change-auto">
+    <button data-menu-open-button type="button" class="will-change-auto group px-3 py-2 outline-1 items-center gap-2 rounded-xs cursor-pointer shadow-largeglow text-shadow-largeglow relative z-10" aria-controls="main-menu" aria-expanded="false" aria-label="Open menu">
+        <div data-menu-open-button-bg class="absolute top-0 left-0 w-full h-full bg-black rounded-xs -z-10 opacity-0"></div> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12" aria-hidden="true">
+            <path fill="#fff" d="M11 10a1 1 0 1 1 0 2H1a1 1 0 1 1 0-2h10Zm0-5a1 1 0 1 1 0 2H1a1 1 0 0 1 0-2h10Zm0-5a1 1 0 1 1 0 2H1a1 1 0 0 1 0-2h10Z"/>
+        </svg>
+        <p class="font-normal text-base leading-4 group-hover:font-semibold transition-all ease-in-out duration-150">Menu<span class="font-semibold select-none" aria-hidden="true"> →</span></p>
+    </button>
+
+    <div data-menu-container class="will-change-auto px-4 py-4 outline-1 hidden flex-col items-start justify-start gap-8 rounded-xs bg-black shadow-largeglow z-10 w-full">
+        <button data-menu-close-button type="button" class="flex group items-center gap-2 cursor-pointer" aria-controls="main-menu" aria-expanded="false" aria-label="Close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none">
+                <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 1 1 11M1 1l10 10"/>
+            </svg>
+            <p class="font-normal text-base leading-4 group-hover:font-semibold transition-all ease-in-out duration-150">Menu<span class="font-semibold select-none" aria-hidden="true"> →</span></p>
+        </button>
+        <nav id="main-menu" class="flex flex-col gap-16 px-6 pb-4 w-fit" aria-label="Main navigation">
+            <ul data-menu-nav-list class="flex flex-col gap-8 w-fit" role="list" id="main-menu-hover-wrapper">
+            </ul>
+            <div class="flex flex-col items-start gap-6">
+                <a href="/docs/CV.pdf" download="CV.pdf" class="flex flex-row items-center gap-2 cursor-pointer text-sm leading-none text-subaccent hover:text-white hover:brightness-115 transition-all ease-in-out duration-150 will-change-auto" data-cv-download aria-label="Download CV">
+                    <div class="w-2.5 h-3 bg-[url(/icons/CV_icon.svg)] bg-no-repeat bg-center bg-contain" aria-hidden="true"></div>
+                    <span class="">Download CV</span>
+                    <span class="text-subaccent opacity-90 font-light text-xs">(en)</span>
+                </a>
+                <button class="group flex flex-row items-center justify-start gap-2 cursor-pointer will-change-auto" data-component="language-switcher" aria-label="Switch language" data-lang-switcher>
+                    <span class="text-sm leading-none lang-switcher__text" data-lang="ru">RU</span>
+                    <span class="h-3 w-0.5 bg-subaccent opacity-80 group-hover:opacity-100 transition-all ease-in-out duration-150 lang-switcher__separator" aria-hidden="true"></span>
+                    <span class="text-sm leading-none lang-switcher__text" data-lang="en">EN</span>
+                </button>
+            </div>
+        </nav>
+    </div>
+</header>
+<main class="flex flex-col items-center justify-start w-full scroll-smooth">
+    <section id="main" class="w-full h-screen hero-background-mobile grid grid-rows-[1fr_auto_1fr]">
+        <div id="hero-title" class="flex flex-col items-center justify-center py-6 gap-4 row-start-2 h-fit mx-auto">
+            <h1 id="hero-title-heading" class="leading-none text-[2.5rem] sm:text-5xl font-semibold text-white text-shadow-extraglow text-center">Name Surname OR Nickname</h1>
+            <p class="leading-none text-xl sm:text-2xl font-normal text-white text-shadow-hugeglow text-center">Your Title</p>
+        </div>
+        <div class="w-full flex flex-col items-center justify-between row-start-3">
+            <ul id="hero-buttons" class="flex gap-5" role="list" aria-label="Social media links">
+    <li><a href="https://link1" class="bg-[url(/icons/link1.svg)] bg-cover block size-6 rounded-full shadow-smallglow cursor-pointer hover:brightness-115 transition-all ease-in-out duration-150" target="_blank" rel="noopener noreferrer" aria-label="Profile 1"></a></li>
+    <li><a href="https://link2" class="bg-[url(/icons/link2.svg)] bg-cover block size-6 rounded-full shadow-smallglow cursor-pointer hover:brightness-115 transition-all ease-in-out duration-150" target="_blank" rel="noopener noreferrer" aria-label="Profile 2"></a></li>
+    <li><a href="https://link3" class="bg-[url(/icons/link3.svg)] bg-cover block size-6 rounded-full shadow-smallglow cursor-pointer hover:brightness-115 transition-all ease-in-out duration-150" target="_blank" rel="noopener noreferrer" aria-label="Profile 3"></a></li>
+            </ul>
+            <a href="#skills" class="px-1 py-12 cursor-pointer" id="arrow-down--internal" role="button" aria-label="Scroll to next section">
+                <div class="w-5.5 h-3 bg-[url(/icons/arrow_bottom.svg)] animate-bounce cursor-pointer" aria-hidden="true"></div>
+            </a>
+        </div>
+    </section>
+    <section id="skills" class="w-full py-32 px-4 sm:px-6 min-h-screen flex flex-col items-center justify-center gap-12 sm:gap-16">
+        <h2 class="text-2xl text-center sm:text-[2rem] font-normal text-white leading-none w-full text-wrap">My Skills & Expertise</h2>
+        <article class="flex flex-col sm:flex-row gap-8 items-center w-fit mx-auto">
+            <div class="w-fit sm:size-[17.5rem] relative mr-0.25">
+                <img src="/images/skills-image.webp" loading="lazy" class="w-full max-w-[22.5rem] max-h-[22.5rem] sm:size-[17.5rem] z-5 object-cover object-center rounded-xs outline outline-white" alt="Description.">
+                <div class="w-full h-full sm:w-[17.5rem] sm:h-[17.5rem] max-w-[22.5rem] max-h-[22.5rem] -z-5 absolute top-3 -left-2 sm:top-4 sm:-left-3 rounded-xs border border-white" aria-hidden="true"></div>
+            </div>
+            <p class="w-full max-w-[22.5rem] sm:max-w-full md:max-w-[28rem] text-wrap text-justify text-base leading-normal text-subaccent font-normal">
+                Cool... No, even pompous description. Want some grotesque?
+            </p>
+        </article>
+        <article class="flex flex-col gap-6 w-full max-w-[22.5rem] sm:max-w-full md:max-w-[47.5625rem]">
+            <h3 id="core-skills-heading" class="text-xs text-subaccent font-semibold leading-none mt-8">Core Capabilities</h3>
+            <ul class="flex flex-col gap-6 w-full" role="list" aria-labelledby="core-skills-heading">
+                <li class="flex flex-row items-start">
+                    <span class="block w-0.5 h-3 bg-white opacity-90 rounded-full mr-3 mt-1.5" aria-hidden="true"></span> <!-- vertical separator like dot -->
+                    <p class="text-base leading-6 text-white opacity-90 font-normal text-wrap">Title 1<br/><span class="text-sm text-subaccent text-justify">Description 1</span></p>
+                </li>
+                <li class="flex flex-row items-start">
+                    <span class="block w-0.5 h-3 bg-white opacity-90 rounded-full mr-3 mt-1.5" aria-hidden="true"></span> <!-- vertical separator like dot -->
+                    <p class="text-base leading-6 text-white opacity-90 font-normal text-wrap">Title 2<br/><span class="text-sm text-subaccent text-justify">Description 2</span></p>
+                </li>
+                <li class="flex flex-row items-start">
+                    <span class="block w-0.5 h-3 bg-white opacity-90 rounded-full mr-3 mt-1.5" aria-hidden="true"></span> <!-- vertical separator like dot -->
+                    <p class="text-base leading-6 text-white opacity-90 font-normal text-wrap">Title 3<br/><span class="text-sm text-subaccent text-justify">Description 3</span></p>
+                </li>
+                <li class="flex flex-row items-start">
+                    <span class="block w-0.5 h-3 bg-white opacity-90 rounded-full mr-3 mt-1.5" aria-hidden="true"></span> <!-- vertical separator like dot -->
+                    <p class="text-base leading-6 text-white opacity-90 font-normal text-wrap">Title 4<br/><span class="text-sm text-subaccent text-justify">Description 4</span></p>
+                </li>
+                <li class="flex flex-row items-start">
+                    <span class="block w-0.5 h-3 bg-white opacity-90 rounded-full mr-3 mt-1.5" aria-hidden="true"></span> <!-- vertical separator like dot -->
+                    <p class="text-base leading-6 text-white opacity-90 font-normal text-wrap">Title 5<br/><span class="text-sm text-subaccent text-justify">Description 5</span></p>
+                </li>
+            </ul>
+            <h3 id="tools-heading" class="text-xs text-subaccent font-semibold leading-none mt-8">Tools</h3>
+            <ul class="flex flex-col gap-6" role="list" aria-labelledby="tools-heading">
+                <li class="flex flex-row items-center">
+                    <span class="h-4 min-w-4 opacity-90 bg-[url(/icons/tool-icon.svg)] bg-cover bg-no-repeat mr-3" aria-hidden="true"></span>
+                    <p class="text-base leading-none text-white opacity-90 font-normal text-wrap">Tool 1</p>
+                </li>
+                <li class="flex flex-row items-center">
+                    <span class="h-4 min-w-4 opacity-90 bg-[url(/icons/tool-icon.svg)] bg-cover bg-no-repeat mr-3" aria-hidden="true"></span>
+                    <p class="text-base leading-none text-white opacity-90 font-normal text-wrap">Tool 2</p>
+                </li>
+                <li class="flex flex-row items-center">
+                    <span class="h-4 min-w-4 opacity-90 bg-[url(/icons/tool-icon.svg)] bg-cover bg-no-repeat mr-3" aria-hidden="true"></span>
+                    <p class="text-base leading-none text-white opacity-90 font-normal text-wrap">Tool 3</p>
+                </li>
+                <li class="flex flex-row items-center">
+                    <span class="h-4 min-w-4 opacity-90 bg-[url(/icons/tool-icon.svg)] bg-cover bg-no-repeat mr-3" aria-hidden="true"></span>
+                    <p class="text-base leading-none text-white opacity-90 font-normal text-wrap">Tool 4</p>
+                </li>
+                <li class="flex flex-row items-center">
+                    <span class="h-4 min-w-4 opacity-90 bg-[url(/icons/tool-icon.svg)] bg-cover bg-no-repeat mr-3" aria-hidden="true"></span>
+                    <p class="text-base leading-none text-white opacity-90 font-normal text-wrap">Tool 5</p>
+                </li>
+                <li class="flex flex-row items-center">
+                    <span class="h-4 min-w-4 opacity-90 bg-[url(/icons/tool-icon.svg)] bg-cover bg-no-repeat mr-3" aria-hidden="true"></span>
+                    <p class="text-base leading-none text-white opacity-90 font-normal text-wrap">Tool 6</p>
+                </li>
+            </ul>
+        </article>
+    </section>
+    <section id="projects" class="w-full py-32 px-4 sm:px-6 min-h-screen flex flex-col items-center justify-center gap-12 sm:gap-16">
+        <h2 class="text-2xl text-center sm:text-[2rem] font-normal text-white leading-none w-full text-wrap">My Portfolio & Projects</h2>
+        <article class="flex flex-col sm:flex-row gap-8 items-center w-fit mx-auto">
+            <div id="projects-image-wrapper" class="w-fit sm:size-[17.5rem] relative mr-0.25">
+                <img loading="lazy" class="w-full h-full max-w-[22.5rem] max-h-[22.5rem] sm:size-[17.5rem] z-5 object-cover object-center rounded-xs outline outline-white bg-black" alt="Currently selected project image.">
+                <div class="w-full h-full sm:w-[17.5rem] sm:h-[17.5rem] max-w-[22.5rem] max-h-[22.5rem] -z-5 absolute top-3 -left-2 sm:top-4 sm:-left-3 rounded-xs border border-white" aria-hidden="true"></div>
+                <!-- also content injecting -->
+            </div>
+            <p id="project-description" class="w-full max-w-[22.5rem] sm:max-w-full md:max-w-[28rem] text-wrap text-justify text-base leading-normal text-subaccent font-normal"></p>
+        </article>
+        <article class="flex flex-col gap-6 w-full max-w-[22.5rem] sm:max-w-full md:max-w-[47.5625rem]">
+            <h3 id="featured-projects-heading" class="text-xs text-subaccent font-semibold leading-none mt-8">Featured Projects</h3>
+            <ul class="flex flex-col gap-6 w-full" data-component="projects-list" role="list" aria-labelledby="featured-projects-heading">
+                <!-- wrapper for inject projects from main.ts by ProjectItemManager.ts -->
+            </ul>
+            <h3 id="adjacent-fields-heading" class="text-xs text-subaccent font-semibold leading-none mt-8">Extended Projects & Expertise</h3>
+            <ul class="flex flex-col gap-6" role="list" aria-labelledby="adjacent-fields-heading">
+                <p class="text-sm font-normal leading-none text-subaccent opacity-90 text-left"> not available yet :(</p>
+                <!-- <li class="flex flex-col gap-3">
+                <h4 class="text-base font-normal leading-none text-subaccent text-left">small project 1</h4>
+                <p class="text-sm font-light text-subaccent opacity-90 text-justify w-full leading-normal">small project description 1</p>
+                </li>
+                <li class="flex flex-col gap-3">
+                <h4 class="text-base font-normal leading-none text-subaccent text-left">small project 2</h4>
+                <p class="text-sm font-light text-subaccent opacity-90 text-justify w-full leading-normal">small project description 2</p>
+                </li> -->
+                <!-- commited because need to make differently. If we save in major projects enought text lenght, then in fixed slide height arrangements these blocks just can't placed or placed very close.-->
+            </ul>
+        </article>
+    </section>
+    <section id="contacts" class="w-full py-32 px-4 sm:px-6 min-h-screen flex flex-col items-center justify-center gap-12 sm:gap-16">
+        <h2 class="text-2xl text-center sm:text-[2rem] font-normal text-white leading-none w-full text-wrap">My Contacts & Social</h2>
+        <article class="flex flex-col gap-6 w-full max-w-[22.5rem] sm:max-w-full md:max-w-[47.5625rem]">
+            <h3 id="core-mails-heading" class="text-xs text-subaccent font-semibold leading-none mt-8">Primary Contact</h3>
+            <ul class="flex flex-col gap-6 w-full" role="list" aria-labelledby="core-mails-heading">
+                <li class="flex flex-col items-start gap-4 w-full">
+                    <div class="group flex flex-row items-center gap-3 h-fit cursor-pointer">
+                        <span class="group-hover:opacity-100 group-hover:bg-white block w-0.5 h-3 bg-subaccent opacity-90 rounded-full transition-all ease-in-out duration-150 will-change-auto" aria-hidden="true"></span>
+                              <a href="mailto:email@email.email" class="group-hover:font-semibold text-base leading-none text-white font-normal h-fit transition-all ease-in-out duration-150 will-change-auto text-wrap">email@email.email<span class="select-none font-semibold" aria-hidden="true"> →</span></a>
+                    </div>
+                    <p class="text-sm font-light leading-none text-subaccent opacity-90">Reach out for inquiries or collaborations. Click to copy or connect.</p>
+                </li>
+                <li class="flex flex-col items-start gap-4 w-full">
+                    <div class="group flex flex-row items-center gap-3 h-fit cursor-pointer">
+                        <span class="group-hover:opacity-100 group-hover:bg-white block w-0.5 h-3 bg-subaccent opacity-90 rounded-full transition-all ease-in-out duration-150 will-change-auto" aria-hidden="true"></span>
+                        <a href="https://link" class="group-hover:font-semibold text-base leading-none text-white font-normal h-fit transition-all ease-in-out duration-150 will-change-auto text-wrap" target="_blank" rel="noopener noreferrer">Link<span class="select-none font-semibold" aria-hidden="true"> →</span></a>
+                    </div>
+                    <p class="text-sm font-light leading-none text-subaccent opacity-90">Connect on [Your messenger] for quick questions or urgent matters. Click to open.</p>
+                </li>
+            </ul>
+            <div class="flex flex-col gap-6 w-full">
+                <h3 id="other-links-heading" class="text-xs text-subaccent font-semibold leading-none mt-8">Other Links</h3>
+                <ul class="flex flex-col sm:flex-row md:flex-col gap-6" role="list" aria-labelledby="other-links-heading">
+                    <li class="group flex flex-row items-center">
+                        <span class="h-4 min-w-4 opacity-90 bg-[url(/icons/link-mini-icon.svg)] bg-cover bg-no-repeat mr-3 group-hover:opacity-100 group-hover:brightness-115 transition-all ease-in-out duration-150 will-change-auto" aria-hidden="true"></span>
+                        <a href="https://link1" class="group-hover:font-semibold group-hover:opacity-100 text-base leading-none text-white opacity-90 font-normal h-fit transition-all ease-in-out duration-150 will-change-auto" target="_blank" rel="noopener noreferrer">Link 1<span class="select-none font-semibold" aria-hidden="true"> →</span></a>
+                    </li>
+                    <li class="group flex flex-row items-center">
+                        <span class="h-4 min-w-4 opacity-90 bg-[url(/icons/link-mini-icon.svg)] bg-cover bg-no-repeat mr-3 group-hover:opacity-100 group-hover:brightness-115 transition-all ease-in-out duration-150 will-change-auto" aria-hidden="true"></span>
+                        <a href="https://link2" class="group-hover:font-semibold group-hover:opacity-100 text-base leading-none text-white opacity-90 font-normal h-fit transition-all ease-in-out duration-150 will-change-auto" target="_blank" rel="noopener noreferrer">Link 2<span class="select-none font-semibold" aria-hidden="true"> →</span></a>
+                    </li>
+                    <li class="group flex flex-row items-center">
+                        <span class="h-4 min-w-4 opacity-90 bg-[url(/icons/link-mini-icon.svg)] bg-cover bg-no-repeat mr-3 group-hover:opacity-100 group-hover:brightness-115 transition-all ease-in-out duration-150 will-change-auto" aria-hidden="true"></span>
+                        <a href="https://link3" class="group-hover:font-semibold group-hover:opacity-100 text-base leading-none text-white opacity-90 font-normal h-fit transition-all ease-in-out duration-150 will-change-auto" target="_blank" rel="noopener noreferrer">Link 3<span class="select-none font-semibold" aria-hidden="true"> →</span></a>
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <article class="flex flex-col w-full max-w-[22.5rem] sm:max-w-full md:max-w-[47.5625rem] items-center gap-6" aria-labelledby="send-inquiry-heading">
+            <h3 id="send-inquiry-heading" class="text-xs text-subaccent font-semibold w-full">Send a Message</h3>
+            <div id="form-wrapper" class="w-full relative will-change-auto h-auto">
+                <form id="contact-form" class="flex flex-col gap-y-4 mr-0.25" novalidate>
+                    <div class="relative">
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Your Name"
+                            required
+                            class="w-full px-4 py-3 rounded-xs outline outline-white bg-black
+                            text-white font-normal placeholder:text-sm placeholder:font-light placeholder:text-subaccent placeholder:opacity-80
+                            focus:outline-white focus:outline-1 focus:outline-offset-0 focus:text-subaccent focus:placeholder:text-subaccent
+                            relative z-10 transition-all ease-in-out duration-150 will-change-auto"
+                            aria-label="Your Name"
+                        />
+                        <div class="absolute top-[0.375rem] right-[0.25rem] w-full h-full rounded-xs border border-white -z-10 pointer-events-none" aria-hidden="true"></div>
+                    </div>
+
+                    <div class="relative">
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Your Email"
+                            required
+                            class="w-full px-4 py-3 rounded-xs outline outline-white bg-black
+                            text-white font-normal
+                            placeholder:text-sm placeholder:font-light placeholder:text-subaccent placeholder:opacity-80
+                            focus:outline-white focus:outline-1 focus:outline-offset-0 focus:text-subaccent focus:placeholder:text-subaccent 
+                            relative z-10 transition-all ease-in-out duration-150 will-change-auto"
+                            aria-label="Your Email"
+                        />
+                        <div class="absolute top-[0.375rem] right-[0.25rem] w-full h-full rounded-xs border border-white -z-10 pointer-events-none" aria-hidden="true"></div>
+                    </div>
+
+                    <div class="relative">
+                        <textarea
+                            name="text"
+                            placeholder="Your Message"
+                            required
+                            rows="4" class="w-full px-4 py-3 rounded-xs outline outline-white bg-black resize-y text-white font-normal
+                            placeholder:text-sm placeholder:font-light placeholder:text-subaccent placeholder:opacity-80
+                            focus:outline-white focus:outline-1 focus:outline-offset-0 focus:text-subaccent focus:placeholder:text-subaccent 
+                            relative z-10 transition-all ease-in-out duration-150 will-change-auto"
+                            aria-label="Your Message"
+                        ></textarea>
+                        <div class="absolute top-[0.375rem] right-[0.25rem] w-full h-full rounded-xs border border-white -z-10 pointer-events-none" aria-hidden="true"></div>
+                    </div>
+
+                    <div id="contacts-button-wrapper" class="relative">
+                        <button
+                            type="submit"
+                            class="group w-full px-4 py-3 rounded-xs outline outline-white bg-black
+                            leading-none
+                            hover:bg-black hover:outline-subaccent
+                            focus:bg-black focus:outline-subaccent
+                            active:bg-subaccent active:outline-subaccent
+                            transition-all ease-in-out duration-150 will-change-auto
+                            relative z-10 flex justify-center items-center"
+                        >
+                            <span class="font-normal group-hover:font-semibold group-hover:text-white group-focus:font-semibold group-focus:text-white group-active:font-semibold group-active:text-black text-subaccent text-sm transition-all ease-in-out duration-150">Send message</span>
+                            <span class="select-none font-semibold text-sm group-hover:text-white group-focus:text-white group-active:text-black transition-all ease-in-out duration-150" aria-hidden="true">→</span>
+                        </button>
+                        <div class="absolute top-[0.375rem] right-[0.25rem] w-full h-full rounded-xs border border-white -z-10 pointer-events-none" aria-hidden="true"></div>
+                    </div>
+                </form>
+                <div id="form-messages" class="mt-8 text-center" aria-live="polite"></div>
+            </div>
+        </article>
+    </section>
+</main>
+<footer class="w-full h-min">
+    <p class="text-center text-xs text-subaccent leading-none mb-4">Designed and developed by Danil Klimov (sarthriles/saakivnzechad) © 2025</p> <!-- but I will not cut a copyright -->
+</footer>

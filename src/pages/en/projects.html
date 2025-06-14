@@ -1,0 +1,44 @@
+<!--
+ * Copyright (c) 2025 Danil Klimov.
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+-->
+
+<section id="projects" class="container max-w-screen-lg w-full h-full flex items-center justify-center mx-auto" aria-labelledby="projects-heading">
+ <div class="flex flex-row items-start justify-between w-fit h-fit">
+  <article class="flex flex-col w-full items-start gap-12" aria-labelledby="project-description-heading">
+   <div id="projects-image-wrapper" class="size-[17.5rem] xl:size-[22.5rem] 2xl:size-[23.75rem] relative will-change-auto ml-0.25">
+    <img class="size-[17.5rem] xl:size-[22.5rem] 2xl:size-[23.75rem] z-5 object-cover object-center rounded-xs outline outline-white bg-black" alt="Currently selected project image.">
+    <div class="size-[17.5rem] xl:size-[22.5rem] 2xl:size-[23.75rem] -z-5 absolute top-4 right-4 rounded-xs border border-white" aria-hidden="true"></div>
+    <!-- also content injecting -->
+   </div>
+   <p id="project-description" class="max-w-[17.5rem] xl:max-w-[22.5rem] 2xl:max-w-[23.75rem] text-wrap text-justify text-base leading-normal text-subaccent font-normal"></p>
+  </article>
+  <div class="flex flex-col gap-16 xl:gap-20 w-full h-fit">
+   <h2 id="projects-heading" class="text-[2rem] xl:text-5xl font-normal text-white leading-none text-nowrap">My Portfolio & Projects</h2>
+   <div class="flex flex-col gap-12">
+    <ul class="flex flex-col gap-6" data-component="projects-list" role="list" aria-labelledby="featured-projects-heading">
+     <h3 id="featured-projects-heading" class="text-xs text-subaccent font-semibold leading-none">Featured Projects</h3>
+        <!-- wrapper for inject projects from main.ts by ProjectItemManager.ts -->
+     </ul>
+    <ul class="flex flex-col gap-6" role="list" aria-labelledby="adjacent-fields-heading">
+     <h3 id="adjacent-fields-heading" class="text-xs text-subaccent font-semibold leading-none">Extended Projects & Expertise</h3>
+     <p class="text-sm font-normal leading-none text-subaccent opacity-90 text-left"> not available yet :(</p>
+     <!-- <li class="flex flex-col gap-3">
+      <h4 class="text-base font-normal leading-none text-subaccent text-left">little project 1</h4>
+      <p class="text-sm font-light leading-normal text-subaccent opacity-90 text-justify max-w-[94%]">little project description 1</p>
+     </li>
+     <li class="flex flex-col gap-3">
+      <h4 class="text-base font-normal leading-none text-subaccent text-left">little project 2</h4>
+      <p class="text-sm font-light leading-normal text-subaccent opacity-90 text-justify max-w-[94%]">little project description 2</p>
+     </li> -->
+     <!-- commited because need to make differently. If we save in major projects enought text lenght, then in fixed slide height arrangements these blocks just can't placed or placed very close.-->
+    </ul>
+   </div>
+  </div>
+ </div>
+ <div class="px-1 py-12 cursor-pointer absolute bottom-0 mx-auto" id="arrow-down--internal" role="button" aria-label="Scroll to next section">
+  <button class="w-5.5 h-3 bg-[url(/icons/arrow_bottom.svg)] animate-bounce cursor-pointer will-change-transform" aria-hidden="true"></button>
+ </div>
+</section>

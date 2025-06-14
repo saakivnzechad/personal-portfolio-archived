@@ -1,0 +1,15 @@
+/*
+ * Copyright (c) 2025 Danil Klimov.
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
+@import "tailwindcss";
+
+.page-container {
+  @apply absolute top-0 left-0 w-full h-full;
+  will-change: transform;
+}
+
+/* to be honest i don't fully understand why i came to this realization, at this stage i trifally began to confuse in project. Accept as a lesson and will better plan the architecture */
