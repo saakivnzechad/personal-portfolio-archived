@@ -95,17 +95,17 @@ To fully appreciate the design and interactive elements, here are the key sectio
 * **Desktop Homepage:**
     ![Desktop Homepage Screenshot](images/desktop-homepage.webp) 
 
-* **Desktop Project Section:**
-    ![Desktop Project Section Screenshot](images/desktop-project-section.webp)
+* **Desktop Projects Section:**
+    ![Desktop Project Section Screenshot](images/desktop-projects-section.webp)
 
 * **Desktop Skills Section:**
     ![Desktop Skills Section Screenshot](images/desktop-skills-section.webp)
 
 * **Mobile Homepage:**
-    ![Mobile Homepage Screenshot](images/mobile-homepage.webp)
+  <img src="images/mobile-homepage.webp" alt="Mobile Homepage Screenshot" width="320"/>
 
 * **Mobile Navigation:**
-    ![Mobile Navigation Screenshot](images/mobile-navigation.webp)
+  <img src="images/mobile-navigation.webp" alt="Mobile Navigation Screenshot" width="320"/>
 
 * **Contact Form:**
     ![Contact Form Screenshot](images/contact-form.webp)
